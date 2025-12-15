@@ -1,4 +1,4 @@
-  "use client"
+   "use client"
 import Link from "next/link";
 import { useState } from "react";
 import { IoIosMenu } from "react-icons/io";
@@ -15,7 +15,8 @@ export function Navbar () {
                  <ul className="hidden md:text-sm font-semibold md:flex gap-10 cursor-pointer">
                     <Link href="/"><li>Home</li></Link>
                     <Link href="/dashboard/add-guest"><li>Bookings</li></Link>
-                    <li>Guest-list</li>
+                    <Link href="/dashboard/guest-list"><li>Guest-list</li></Link>
+                    <Link href="/dashboard/profile"><li>Profile</li></Link>
                  </ul>
                  <Link href="/auth/login">
                  <div className="hidden md:block">
@@ -29,9 +30,10 @@ export function Navbar () {
             {dropDown && (
             <div className="flex flex-col gap-5 justify-center items-center">
                <ul className="flex flex-col gap-3">
-                  <li>Home</li>
-                  <li>Contact-us</li>
-                  <li>About-us</li>
+                  <Link href="/"><li>Home</li></Link>
+                  <Link href="/dashboard/add-guest"><li>Bookings</li></Link>
+                  <Link href="/dashboard/guest-list"><li>Guest-list</li></Link>
+                  <Link href="/dashboard/profile"><li>Profile</li></Link>
                </ul>
                 <button className="w-15 h-8 bg-blue-500 rounded-md text-white ">Login</button>
             </div>
